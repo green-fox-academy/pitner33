@@ -1,0 +1,67 @@
+#all {
+    
+    }
+
+#menusav {
+    padding: 10px 10%;
+    font-family: 'Consolas', courier;
+    background-color: #333333;
+}
+
+#content {
+    padding: 0% 10%;
+    border: solid 1px black;
+    background-image: url("topography.png");
+    font-family: 'Consolas', courier;
+}
+
+.box1 {
+    padding-top: 10px;
+}
+
+.box2 {
+    padding-bottom: 0px;
+    text-align:right;
+    
+}
+
+.menupont {
+    text-transform: uppercase;
+    color: #ff0099;
+}
+
+h1 {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+#top h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ff0099
+}
+
+#break {
+    font-size: 32px;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+#top p {
+    font-size: 16px;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+}
+
+p {
+    
+}

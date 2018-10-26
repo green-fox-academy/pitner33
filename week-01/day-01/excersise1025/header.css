@@ -1,0 +1,31 @@
+* {
+    font-family: 'Consolas', courier;
+}
+
+a {
+    color: #ff0099;
+    margin: 0 15px;
+}
+
+ul {
+   float: right;
+    list-style-type: none;
+}
+
+li{
+    display:inline-block;
+}
+
+.line{
+    display:inline-block;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.header {
+    background-color: dimgrey;
+    padding: 5px 10%;
+}
+
+
+
