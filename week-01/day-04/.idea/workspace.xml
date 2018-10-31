@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b13880e-2fcd-4405-a010-5c269d1e153a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../day-04-homework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day-04-homework/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day-05/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day-05/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day-05/src/e20Unique.java" beforeDir="false" afterPath="$PROJECT_DIR$/../day-05/src/e20Unique.java" afterDir="false" />
-    </list>
+    <list default="true" id="5b13880e-2fcd-4405-a010-5c269d1e153a" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -151,7 +147,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="-7" />
     <option name="width" value="864" />
     <option name="height" value="735" />
   </component>
@@ -186,7 +182,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540997586944" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541002282041" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -273,7 +269,7 @@
     <option name="totallyTimeSpent" value="25217000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="864" height="735" extended-state="0" />
+    <frame x="-7" y="0" width="864" height="735" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23383084" />
