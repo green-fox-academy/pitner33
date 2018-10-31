@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc67014f-e74e-45f0-acc4-fa12c3836a31" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../day-05/src/e07Third.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../day-05/src/e08CompareLength.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../day-05/src/e10ChangeElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../day-05/src/e11IncrementElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../day-05/src/e12PrintElements.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../day-05/src/s09SumElements.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../day-05/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day-05/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day-05/src/e04Summing.java" beforeDir="false" afterPath="$PROJECT_DIR$/../day-05/src/e04Summing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day-05/src/e05Factorial.java" beforeDir="false" afterPath="$PROJECT_DIR$/../day-05/src/e05Factorial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day-05/src/e06PrintArguments.java" beforeDir="false" afterPath="$PROJECT_DIR$/../day-05/src/e06PrintArguments.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,7 +15,7 @@
     <session id="1511416116">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.opened" value="2" />
@@ -219,7 +210,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="864" height="735" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2562189" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
