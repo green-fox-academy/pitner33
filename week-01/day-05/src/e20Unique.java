@@ -26,7 +26,7 @@ public class e20Unique {
         int m = 0;
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j <= m; j++) {
-                //ide jon hogz ha nem ugyanaz a ket elem, akkor irja be a newba es novelje meg ay m-et
+                //ide jon hogy ha nem ugyanaz a ket elem, akkor irja be a newba es novelje meg ay m-et
                 if (notContain(newArray, array[i], m)) {
                     newArray[m] = array[i];
                     m++;
