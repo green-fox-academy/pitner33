@@ -24,8 +24,8 @@ public class e05Reverse {
 
     }
 
-    public static String reverse2(String a) {
-        
-    }
+/*    public static String reverse2(String a) {
+
+    }*/
 }
 
