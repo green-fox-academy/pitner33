@@ -56,9 +56,9 @@ public class e15StudentCounter {
         double sum = 0;
         for (int i = 0; i < map.size() ; i++) {
             if ((int)(map.get(i).get("candies")) < new Integer(5)) {
-                String ageString =  map.get(i).get("age") + " ";
-                double value = Double.parseDouble(ageString);
-                System.out.println(value);
+                String ageString =  map.get(i).get("age") + " "; //get into string for modify to double
+                double value = Double.parseDouble(ageString); //added by Krisz
+                System.out.println(value); //just for checking the values
                 sum += value;
             }
         }
