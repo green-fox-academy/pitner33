@@ -10,7 +10,7 @@ public class e00MaterialReview {
         // int also works
         //max = upper limit (+1 is for reaching it)
         //min = lower limit
-        // +min dunno why is it neccessary
+        // +min gives ay offset by min to the whole thing
     }
 
 
