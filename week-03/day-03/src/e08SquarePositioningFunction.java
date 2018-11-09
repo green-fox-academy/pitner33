@@ -1,10 +1,9 @@
 import javax.swing.*;
-
 import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class e08SquarePositioning {
+public class e08SquarePositioningFunction {
     public static void mainDraw(Graphics graphics){
         // create a square drawing function that takes 2 parameters:
         // the x and y coordinates of the square's top left corner
@@ -19,13 +18,16 @@ public class e08SquarePositioning {
             int y = (int)(Math.random() * (270) + 1);
             double filled = (double)(Math.random());
 
-            graphics.setColor(new Color(r, g, b));
-            if (filled <= 0.5) {
-                graphics.drawRect(x, y, 50, 50);
-            } else graphics.fillRect(x, y, 50, 50);
+            squareDrawing(graphics, x, y, r, g, b, filled);
         }
     }
 
+    private static void squareDrawing(Graphics graphics, int x, int y, int r, int g, int b, double filled) {
+        graphics.setColor(new Color(r, g, b));
+        if (filled <= 0.5) {
+            graphics.drawRect(x, y, 50, 50);
+        } else graphics.fillRect(x, y, 50, 50);
+    }
 
     // Don't touch the code below
     static int WIDTH = 320;

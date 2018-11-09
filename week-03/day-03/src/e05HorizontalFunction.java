@@ -4,24 +4,24 @@ import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class e09CenteredBoxesFunction {
+public class e05HorizontalFunction {
     public static void mainDraw(Graphics graphics) {
-        // create a square drawing function that takes 1 parameter:
-        // the square size
-        // and draws a square of that size to the center of the canvas.
-        // draw 3 squares with that function.
-        // avoid code duplication.
-        for (int i = 0; i < 3; i++) {
-            int size = (int) (Math.random() * (320) + 1);
-            centerBox(graphics, size);
+        // Create a line drawing function that takes 2 parameters:
+        // The x and y coordinates of the line's starting point
+        // and draws a 50 long horizontal line from that point.
+        // Draw 3 lines with that function. Use loop for that.
+        for (int i = 0; i < 3 ; i++) {
+            int x = (int) (Math.random() * (270) + 1);
+            int y = (int) (Math.random() * (320) + 1);
 
+            horizontal(graphics, x, y);
         }
-
     }
 
-    public static void centerBox(Graphics g, int a) {
-        g.drawRect((160 - a / 2), (160 - a / 2), a, a);
+    public static void horizontal(Graphics graphics, int x, int y) {
+        graphics.drawLine(x, y, (x+50), y);
     }
+
 
     // Don't touch the code below
     static int WIDTH = 320;

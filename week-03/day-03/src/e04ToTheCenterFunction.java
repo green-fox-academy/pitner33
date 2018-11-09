@@ -4,23 +4,24 @@ import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class e09CenteredBoxesFunction {
+public class e04ToTheCenterFunction {
     public static void mainDraw(Graphics graphics) {
-        // create a square drawing function that takes 1 parameter:
-        // the square size
-        // and draws a square of that size to the center of the canvas.
-        // draw 3 squares with that function.
-        // avoid code duplication.
-        for (int i = 0; i < 3; i++) {
-            int size = (int) (Math.random() * (320) + 1);
-            centerBox(graphics, size);
+        // Create a line drawing function that takes 2 parameters:
+        // The x and y coordinates of the line's starting point
+        // and draws a line from that point to the center of the canvas.
+        // Draw 3 lines with that function. Use loop for that.
 
+        //just for fun I draw a random number of lines between 3 and 100
+        int numOfLines = (int)(Math.random() * (100 - 3) + 1) + 3;
+        for (int i = 0; i < numOfLines; i++) {
+            int x = (int)(Math.random() * (320) + 1);
+            int y = (int)(Math.random() * (320) + 1);
+            toTheCenter(graphics, x, y);
         }
-
     }
+    public static void toTheCenter(Graphics g, int x, int y) {
+        g.drawLine(x, y,160, 160);
 
-    public static void centerBox(Graphics g, int a) {
-        g.drawRect((160 - a / 2), (160 - a / 2), a, a);
     }
 
     // Don't touch the code below
