@@ -8,7 +8,7 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 public class e02LinePlayQuarters {
     public static void mainDraw(Graphics graphics) {
 
-        int windows = 64;
+        int windows = 16;
 //        Here is the scanner part which runs two times because of the mainDraw method is called in an other method at the end
 //        --according to Levi
         /*Scanner scanner = new Scanner(System.in);
@@ -36,7 +36,7 @@ public class e02LinePlayQuarters {
                 graphics.setColor(Color.BLACK);
                 graphics.drawRect(windowOffsetX, windowOffsetY, windowWidth, windowWidth);
 
-                for (int k = 1; k < 14; k++) {
+                for (int k = 1; k <= 14; k++) {
                     x = windowOffsetX + (windowWidth / 8 + (((7 * windowWidth) / 8) / 14) * k);
                     y = windowOffsetY + ((((7 * windowWidth) / 8) / 14) * k);
 
@@ -44,7 +44,7 @@ public class e02LinePlayQuarters {
                     graphics.drawLine(x, 0 + offset + windowOffsetY, windowWidth - offset + windowOffsetX, y);
                 }
 
-                for (int l = 1; l < 14; l++) {
+                for (int l = 1; l <= 14; l++) {
                     y = windowOffsetY + (windowWidth / 8 + (((7 * windowWidth) / 8) / 14) * l);
                     x = windowOffsetX + ((((7 * windowWidth) / 8) / 14) * l);
 

@@ -7,6 +7,14 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class e04TrianglesFromLines {
     public static void mainDraw(Graphics graphics) {
+        int baseline = 400;
+        int m = (int)((sqrt(3)*(WIDTH/21))/2);
+        int offsetX = (WIDTH/21)/2;
+        for (int i = 0; i < 21; i++) {
+            graphics.drawLine((offsetX * i), (baseline - (i * m)), (offsetX * i) + ((21-i)* (WIDTH/21)), (baseline - (i * m)));
+            graphics.drawLine((WIDTH/21 * i), baseline, ((WIDTH/2) + (offsetX*i)), (baseline - (21-i)*m));
+            graphics.drawLine((WIDTH/21 * (21-i)), baseline, ((WIDTH/2) - (offsetX*i)),(baseline - (21-i)*m));
+        }
 
     }
 
@@ -14,8 +22,8 @@ public class e04TrianglesFromLines {
 
 
     // Don't touch the code below
-    static int WIDTH = 630;
-    static int HEIGHT = 700;
+    static int WIDTH = 420;
+    static int HEIGHT = 500;
 
     public static void main(String[] args) {
         JFrame jFrame = new JFrame("Drawing");
