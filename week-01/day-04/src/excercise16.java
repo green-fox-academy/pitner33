@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class excersise16 {
+public class excercise16 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

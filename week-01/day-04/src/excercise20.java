@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.SortedMap;
 
-public class excersise20 {
+public class excercise20 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

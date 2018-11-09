@@ -1,4 +1,4 @@
-public class excersise04 {
+public class excercise04 {
     public static void main(String[] args) {
         System.out.println("Peter Kovacs");
         System.out.println("43");

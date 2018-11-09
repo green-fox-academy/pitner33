@@ -1,4 +1,4 @@
-public class excersise06 {
+public class excercise06 {
     public static void main(String[] args) {
         int dailyCode = 6; //daily coding - hours
         int semester = 17; //semester lenght - weeks

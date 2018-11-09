@@ -1,4 +1,4 @@
-public class excersise27 {
+public class excercise27 {
     public static void main(String[] args) {
 
         for (int i = 1; i<101; i++) {
