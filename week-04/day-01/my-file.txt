@@ -1,0 +1,4 @@
+Myfile first string
+second
+Third
+Sol was here!
