@@ -13,8 +13,8 @@ public class e05reversedLines {
         try {
             Path filepath = Paths.get("reversed-lines.txt");
             List<String> content = Files.readAllLines(filepath);
-            Files.write(Paths.get("reverse-write.txt"), reverse(content));
-            System.out.println(reverse(content));
+            Files.write(Paths.get("reversed-lines-write.txt"), reverse(content));
+            System.out.println(String.join("\n",reverse(content)));
         } catch (IOException e) {
             e.printStackTrace();
         }
