@@ -8,7 +8,7 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 public class e02LinePlayQuarters {
     public static void mainDraw(Graphics graphics) {
 
-        int windows = 16;
+        int windows = 64;
 //        Here is the scanner part which runs two times because of the mainDraw method is called in an other method at the end
 //        --according to Levi
         /*Scanner scanner = new Scanner(System.in);

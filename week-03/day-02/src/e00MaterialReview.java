@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class e00MaterialReview {
     public static void main(String[] args) {
         //arrayListName.remove(new Integer(1)); removes the number "1" from the list (and onlz the first one if there were multiple "1"-s
@@ -8,4 +9,5 @@ public class e00MaterialReview {
         // .split gives you an array in which the elementst are the parts of the string splitted by the given char
         // String[] words = stringname.split(" "); here the element is SPACE
     }
+
 }

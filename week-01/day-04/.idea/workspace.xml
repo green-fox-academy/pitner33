@@ -2,36 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b13880e-2fcd-4405-a010-5c269d1e153a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/excersie1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/excercise1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/excersise03.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/excercise03.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/excersise04.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/excercise04.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/excersise05.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/excercise05.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/excersise06.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/excercise06.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/excersise07.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/excercise07.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/excersise08.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/excercise08.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/excersise09.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/excercise09.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/excersise10.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/excercise10.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/excersise11.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/excercise11.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/excersise12.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/excercise12.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/excersise13.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/excersise14.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/excercise14.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/excersise15.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/excercise15.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/excersise16.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/excercise16.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/excersise17.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/excercise17.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/excersise18.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/excercise18.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/excersise19.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/excercise19.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/excersise2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/excersise20.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/excercise20.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/excersise21.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/excercise21.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/excersise22.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/excercise22.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/excersise23.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/excercise23.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/excersise24.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/excercise24.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/excersise25.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/excercise25.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/excersise26.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/excercise26.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/excersise27.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/excercise27.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/excersise28.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/excersise29.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/excercise29.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week-03/day-02/src/e00MaterialReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../week-03/day-02/src/e00MaterialReview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week-03/day-05/src/e02LinePlayQuarters.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../week-03/day-05/src/e02LinePlayQuarters.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,11 +16,11 @@
     <session id="1891475793">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.0" value="3" />
-          <entry key="project.open.time.1" value="3" />
+          <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -126,7 +98,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/e35DrawAChesstable.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
@@ -135,7 +107,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/e36FindTheSubstring.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
@@ -233,7 +205,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
     <option name="width" value="864" />
     <option name="height" value="735" />
@@ -247,6 +219,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -263,14 +236,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541770235905" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541951945586" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../week-03/day-03" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -284,7 +256,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.e36FindTheSubstring">
+  <component name="RunManager" selected="Application.e35DrawAChesstable">
     <configuration name="e30Diamond" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="e30Diamond" />
       <module name="day-04" />
@@ -329,11 +301,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.e35DrawAChesstable" />
         <item itemvalue="Application.e36FindTheSubstring" />
         <item itemvalue="Application.e30Diamond" />
         <item itemvalue="Application.excercise1" />
         <item itemvalue="Application.substring" />
-        <item itemvalue="Application.e35DrawAChesstable" />
       </list>
     </recent_temporary>
   </component>
@@ -354,16 +326,17 @@
       <workItem from="1541761038237" duration="1193000" />
       <workItem from="1541764983624" duration="924000" />
       <workItem from="1541770672376" duration="3000" />
+      <workItem from="1541871838244" duration="640000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47621000" />
+    <option name="totallyTimeSpent" value="48261000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-7" y="0" width="864" height="735" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15960665" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26616916" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -372,7 +345,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30491802" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30948418" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39933443" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -631,13 +604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/e35DrawAChesstable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/substring.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -663,6 +629,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/e35DrawAChesstable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
         </state>
       </provider>
     </entry>
