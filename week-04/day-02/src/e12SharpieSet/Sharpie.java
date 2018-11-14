@@ -18,6 +18,20 @@ public class Sharpie {
     }
 
     public void use() {
+
         this.inkAmount--;
+    }
+
+    public float getInkAmount() {
+        return this.inkAmount;
+    }
+
+    @Override
+    public String toString() {
+        return "Sharpie{" +
+                "color='" + color + '\'' +
+                ", width=" + width +
+                ", inkAmount=" + inkAmount +
+                '}';
     }
 }
