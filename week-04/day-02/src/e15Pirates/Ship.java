@@ -64,7 +64,7 @@ public class Ship {
                 countDrunkLevel4++;
             }
         }
-        System.out.println("From the crew\n" + countDrunkLevel0 + " pirates is sober,\n" + countDrunkLevel1 + " pirates has drank 1 bottle of rum,\n" + countDrunkLevel2 + " pirates has drank 2 bottles of rum,\n" + countDrunkLevel3 + " pirates has drank 3 bottles of rum,\n" + countDrunkLevel4 + " pirates has drank 4 bottles of rum,\n");
+        System.out.println("From the crew\n" + countDrunkLevel0 + " pirates are sober,\n" + countDrunkLevel1 + " pirates have drunk 1 bottle of rum,\n" + countDrunkLevel2 + " pirates have drunk 2 bottles of rum,\n" + countDrunkLevel3 + " pirates have drunk 3 bottles of rum,\n" + countDrunkLevel4 + " pirates have drunk 4 bottles of rum,\n");
     }
 
     public boolean battle(Ship otherShip) {
