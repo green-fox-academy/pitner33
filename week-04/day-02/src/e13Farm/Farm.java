@@ -36,7 +36,7 @@ public class Farm {
 
         }
         animalList.remove(toSlaughter);
-        freeplaces--;
+        freeplaces++;
 
 
 
