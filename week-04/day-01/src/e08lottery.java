@@ -1,9 +1,9 @@
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class e08lottery {
     public static void main(String[] args) {
@@ -12,6 +12,7 @@ public class e08lottery {
             Path filePath = Paths.get("lottery.txt");
             List<String> content = Files.readAllLines(filePath);
             System.out.println(lottery(content));
+            System.out.println(lottery(content).size());
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -28,14 +29,24 @@ public class e08lottery {
                 allLotteryNumber.add(lotteryNumbers);
             }
         }
+        int[][] lotteryArray = new int[allLotteryNumber.size()][2];
+        for (int i = 0; i < allLotteryNumber.size(); i++) {
+            int count = 1;
 
+            List<Map<String, Integer>> lotteryBigNumbers = new ArrayList<>();
+            Map<String, Integer> lotteryNumberCounter= new HashMap<>();
+            for (int j = i+1; j < allLotteryNumber.size(); j++) {
+                if (allLotteryNumber.get(i).equals(allLotteryNumber.get(j))) {
+                    count++;
+                }
+
+            }
+
+        }
         return  allLotteryNumber;
 
 
+
     }
-//    az 5 leggyakoribbhoz. dupla fori ami ha egyezést talál count++, ezután az i-diket beteszi egy új tömbbe, a count-al együtt
-//    ?? 2 dimenziós tömb? mérete az eredeti lista size ill 2
-//    az i ugik egyet, count nulláz, ha egyezést talál count++ és az új listába legelőre teszi, ha a countja nagyobb, mint az aktuális első ott
-//    így mindig a legnagyobb count-ú lesz elöl, [szám][count] formában
-//    ezután csak ki kell nyomtatni a multitömb első 5 elemét
+
 }
