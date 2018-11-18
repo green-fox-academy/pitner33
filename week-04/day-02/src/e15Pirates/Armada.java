@@ -20,17 +20,17 @@ public class Armada {
         this.armada = new ArrayList<>();
     }
 
-    public boolean war(Armada otherArmada) {
+    public boolean war(Armada armada, Armada otherArmada) {
         int i = 0;
         int j = 0;
-        while ((armada.size() > 0) && (otherArmada.armada.size() > 0)) {
-            if (armada.get(i).battle(otherArmada.armada.get(j))) {
+        while ((armada.armada.size() > 0) && (otherArmada.armada.size() > 0)) {
+            if (armada.armada.get(i).battle(armada.armada.get(i), otherArmada.armada.get(j))) {
                 otherArmada.armada.remove(j);
 
-            } else armada.remove(i);
+            } else armada.armada.remove(i);
 
         }
-        if (armada.size() == 0) {
+        if (armada.armada.size() == 0) {
             System.out.println(otherArmada.nameOfArmada + " won over " + nameOfArmada);
             return false;
         } else {

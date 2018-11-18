@@ -33,7 +33,7 @@ public class Main {
         Ship midnight = new Ship("Midnight");
         midnight.fillShip();
 
-        System.out.println(midnight.battle(noon));
-        midnight.battle(noon);
+        System.out.println(midnight.battle(midnight, noon));
+        midnight.battle(midnight, noon);
     }
 }

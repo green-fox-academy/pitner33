@@ -8,7 +8,7 @@ public class BattleApp {
          pirates.fillShip();
          merchants.fillShip();
 
-         pirates.battle(merchants);
+         pirates.battle(pirates, merchants);
 
     }
 }

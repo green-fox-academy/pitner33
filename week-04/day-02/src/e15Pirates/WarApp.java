@@ -13,7 +13,7 @@ public class WarApp {
             black.armada.get(i).fillShip();
         }
 
-        red.war(black);
+        red.war(red, black);
 
     }
 }
