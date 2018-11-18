@@ -93,34 +93,31 @@ public class Ship {
         System.out.println("The " + winnerShip.shipname + " won over the " + loserShip.shipname + ".\n" + dieCount + " pirates died on the " + loserShip.shipname + ".");
     }
 
-    public boolean battle(Ship ship, Ship otherShip) {
-//        The loser crew has a random number of losses (deaths).
+//    The winner captain and crew has a party, including a random number of rum
+    public void winnerParty(Ship ship) {
+        int rumCounter = 0;
+        for (int i = 0; i < ship.ship.size(); i++) {
+            int randomRum = (int)(Math.random() * 4);
+            rumCounter += randomRum;
+            ship.ship.get(i).drunkLevel += randomRum;
+        }
+        System.out.println("The " + ship.shipname + " has a party. The pirates drink " + rumCounter + " bottles of rum altogether");
+        System.out.println("_______________________________________________________________________");
+    }
 
+    public boolean battle(Ship ship, Ship otherShip) {
         if (scoreOfShip(ship) > scoreOfShip(otherShip)) {
+//          The loser crew has a random number of losses (deaths).
             loserDie(ship, otherShip);
 
-//            The winner captain and crew has a party, including a random number of rum
-            int rumCounter = 0;
-            for (int i = 0; i < ship.ship.size(); i++) {
-                int randomRum = (int)(Math.random() * 4);
-                rumCounter += randomRum;
-                ship.ship.get(i).drunkLevel += randomRum;
-            }
-            System.out.println("The " + shipname + " has a party. The pirates drink " + rumCounter + " bottles of rum altogether");
-            System.out.println("_______________________________________________________________________");
-        }
-        if (scoreOfShip(ship) < scoreOfShip(otherShip)) {
+//          The winner captain and crew has a party, including a random number of rum
+            winnerParty(ship);
+        } else {
+//          The loser crew has a random number of losses (deaths).
             loserDie(otherShip, ship);
-            
-//            The winner captain and crew has a party, including a random number of rum
-            int rumCounter = 0;
-            for (int i = 0; i < otherShip.ship.size(); i++) {
-                int randomRum = (int)(Math.random() * 4);
-                rumCounter += randomRum;
-                otherShip.ship.get(i).drunkLevel += randomRum;
-            }
-            System.out.println("The " + otherShip.shipname + " has a party. The pirates drink " + rumCounter + " bottles of rum altogether");
-            System.out.println("_______________________________________________________________________");
+
+//          The winner captain and crew has a party, including a random number of rum
+            winnerParty(otherShip);
         }
 
         return scoreOfShip(ship) > scoreOfShip(otherShip);
