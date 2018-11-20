@@ -12,9 +12,7 @@ public class Flower extends Plant {
     }
 
 
-    public void watering(double water) {
-        setWaterAmount(0.75 * water);
-    }
+
 
 
 }
