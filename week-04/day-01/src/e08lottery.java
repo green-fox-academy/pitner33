@@ -4,6 +4,14 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
+import  java.util.Map;
+import java.util.Map.Entry;
+import java.util.Comparator;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
+
 
 public class e08lottery {
     public static void main(String[] args) {
@@ -29,20 +37,26 @@ public class e08lottery {
                 allLotteryNumber.add(lotteryNumbers);
             }
         }
-        int[][] lotteryArray = new int[allLotteryNumber.size()][2];
-        for (int i = 0; i < allLotteryNumber.size(); i++) {
-            int count = 1;
 
-            List<Map<String, Integer>> lotteryBigNumbers = new ArrayList<>();
-            Map<String, Integer> lotteryNumberCounter= new HashMap<>();
+        Map<String, Integer> lotteryUnsorted= new HashMap<>();
+        int count = 1;
+        for (int i = 0; i < allLotteryNumber.size(); i++) {
+            count = 1;
             for (int j = i+1; j < allLotteryNumber.size(); j++) {
                 if (allLotteryNumber.get(i).equals(allLotteryNumber.get(j))) {
                     count++;
+                    allLotteryNumber.remove(j);
                 }
-
             }
-
+            lotteryUnsorted.put(allLotteryNumber.get(i), count);
         }
+
+        System.out.println(Arrays.asList(lotteryUnsorted));
+        System.out.println(lotteryUnsorted.size());
+
+
+        System.out.println(lotteryUnsorted.get("3").intValue());
+
         return  allLotteryNumber;
 
 
