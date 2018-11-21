@@ -50,5 +50,8 @@ public class e00MaterialReview {
 //
 //      Comparator
 //
-
+public static void main(String[] args) {
+    String text = "example";
+    System.out.println(text.charAt(3) + 5);
+}
 }
