@@ -48,5 +48,13 @@ public class Main {
         System.out.println(fleet);
         Collections.sort(fleet.getThings());
         System.out.println(fleet);
+
+        for (Domino d : dominoes) {
+            d.printAllFields();
+        }
+
+        for (Thing t : fleet.getThings()) {
+            t.printAllFields();
+        }
     }
 }
