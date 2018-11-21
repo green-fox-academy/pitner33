@@ -20,14 +20,14 @@ public class Carrier {
         aircraftList.add(aircraft);
     }
 
-    public void fill() {
+    public void fill() { //put refill method here from aircraft class!!!! Like in the first forloop - check first if it worked properly
         if (storedAmmo == 0) {
             System.out.println("Carrier is out of ammo!");
 
         } else if (ammoNeedForFill() <= storedAmmo) {
             for (int i = 0; i < aircraftList.size(); i++) {
-                storedAmmo -= (aircraftList.get(i).getMaxAmmo() - aircraftList.get(i).getAmmo());
-                aircraftList.get(i).setAmmo(aircraftList.get(i).getMaxAmmo());
+
+                aircraftList.get(i).refill(storedAmmo); //check this one for proper working!!
             }
         } else {
             for (int i = 0; i < aircraftList.size(); i++) {
