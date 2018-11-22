@@ -21,7 +21,7 @@ class CountLetterTest {
         testMap.put("m", 1);
         testMap.put("p", 1);
         testMap.put("l", 1);
-        assertEquals(testMap, CountLetter.letterDictionary(testText));
+                assertEquals(testMap, CountLetter.letterDictionary(testText));
 
     }
 }
