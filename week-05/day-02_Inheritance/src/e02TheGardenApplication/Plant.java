@@ -7,8 +7,6 @@ public class Plant {
     private double absorbLevel;
     private String type;
 
-
-
     public Plant(String color, String type, double minWater, double absorbLevel) {
         this.waterAmount = 0;
         this.color = color;
@@ -25,10 +23,11 @@ public class Plant {
         waterAmount = absorbLevel * waterForPlants;
     }
 
-
-
     public String getType() {
         return type;
+    }
+    public String getColor() {
+        return color;
     }
 
     public void setType(String type) {
@@ -61,9 +60,7 @@ public class Plant {
         this.waterAmount = waterAmount;
     }
 
-    public String getColor() {
-        return color;
-    }
+
 
     public void setColor(String color) {
         this.color = color;

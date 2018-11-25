@@ -38,7 +38,9 @@ public class Garden {
 
     public void gardenStatus() {
             for (int i = 0; i < plantList.size(); i++) {
-                System.out.println("The " + plantList.get(i).getColor() + " " + plantList.get(i).getType() + (plantList.get(i).isThirsty() ? " needs water." : " doesn't need water."));;
+                System.out.println("The " + plantList.get(i).getColor() + " "
+                        + plantList.get(i).getType()
+                        + (plantList.get(i).isThirsty() ? " needs water." : " doesn't need water."));;
             }
         System.out.println("");
     }
