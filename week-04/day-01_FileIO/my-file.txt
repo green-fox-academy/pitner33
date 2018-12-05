@@ -2,3 +2,6 @@ Myfile first string
 second
 Third
 Sol was here!
+Sol was here!
+Sol was here!
+Sol was here!
