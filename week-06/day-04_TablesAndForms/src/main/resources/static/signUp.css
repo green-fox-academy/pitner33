@@ -1,0 +1,86 @@
+body {
+    font-family: "Segoe UI";
+    margin-left: 20px;
+}
+
+h1 {
+    font-weight: lighter;
+    font-size: 36px;
+}
+.circle {
+    border: darkgray solid 1px;
+    border-radius: 15px;
+    background-color: lightgrey;
+
+    text-transform: uppercase;
+    position: absolute;
+    left: 245px;
+    top: 190px;
+    padding: 5px;
+}
+
+label {
+    display: none;
+}
+
+input {
+    border: 0px;
+    outline: 0px;
+    border-bottom: gray 1px solid;
+    width: 200px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+input:hover {
+    border-bottom: mediumseagreen 2px solid;
+}
+
+a {
+    position: absolute;
+    left: 300px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    width: 200px;
+    height: 25px;
+    border-radius: 3px;
+    text-align: center;
+    padding-top: 10px;
+}
+ #facebook {
+     position: absolute;
+     top: 145px;
+     background-color: #3b5998;
+ }
+#twitter {
+    position: absolute;
+    top: 190px;
+    background-color: #1da1f2;
+}
+#google {
+    position: absolute;
+    top: 235px;
+    background-color: #d34836;
+}
+
+button {
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 3px;
+    text-align: center;
+    vertical-align: auto;
+    background-color: mediumseagreen;
+    width: 100px;
+    height: 30px;
+    padding-top: 3px;
+    border-style: hidden;
+
+
+
+}
+
+
