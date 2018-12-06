@@ -1,0 +1,11 @@
+input[type="text"],
+input[type="email"] {
+    display: block;
+    padding: 5px;
+    margin: 5px;
+}
+button {
+    padding: 5px 20px;
+    background-color: green;
+    border-radius: 10px;
+}
