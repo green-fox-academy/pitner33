@@ -1,0 +1,39 @@
+body {
+    background-color: dodgerblue;
+    margin: 30px 30px 0px 30px;
+    font-family: "Segoe UI";
+    width: 100%;
+}
+
+table {
+    border: gray solid 0.5px;
+    border-radius: 10px;
+    overflow: hidden;
+    border-collapse: collapse;
+    margin: 20px;
+}
+
+th {
+    background-color: black;
+    font-size: 24px;
+    font-weight: lighter;
+    border: gray solid 0.5px;
+    color: #d3d3d3;
+    padding: 10px 150px 10px 10px;
+}
+
+td {
+    font-size: 16px;
+    border: darkgray solid 0.5px;
+    color: #000;
+    padding: 10px;
+
+}
+
+tbody tr:nth-child(even) {
+    background: lightgrey;
+}
+tbody tr:nth-child(odd) {
+    background-color: whitesmoke;
+}
+
