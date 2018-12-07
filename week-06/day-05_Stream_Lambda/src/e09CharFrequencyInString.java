@@ -1,10 +1,8 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
-public class e06Uppercase {
-//    Write a Stream Expression to find the uppercase characters in a string!
+public class e09CharFrequencyInString {
+//    Write a Stream Expression to find the frequency of characters in a given string!
 
     public static void main(String[] args) {
         String text = "Talán annak szerencsés véletlennek köszönhetem a digitális világ iránti érdeklődésemet, " +
@@ -17,24 +15,21 @@ public class e06Uppercase {
                 "adnom az én nem annyira menő Play & Time békás-elkapós játékomat (Frogs), hogy egyszer játszhassak " +
                 "az övével.";
 
-
-
-        List<Character> charArray = new ArrayList<>();
+        List<Character> charArrayList = new ArrayList<>();
 
         for (int i = 0; i < text.length() ; i++) {
-            charArray.add(text.charAt(i));
+            charArrayList.add(text.charAt(i));
         }
-        System.out.println(charArray);
+        System.out.println(charArrayList);
 
+        for (int i = 0; i < charArrayList.size(); i++) {
+            System.out.print(text.charAt(i) + ": ");
+            System.out.println(charArrayList.stream()
+                    .filter(t -> t.equals(t))
+                    .count());
 
-        System.out.println(charArray.stream()
-                .filter(c -> Character.isUpperCase(c))
-                .collect(Collectors.toList()));
+        }
 
-
-
-
-
+//STILL NOT OK!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     }
 }
-
