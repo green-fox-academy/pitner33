@@ -1,0 +1,93 @@
+body {
+    background-color: #504455;
+    font-family: "Segoe UI";
+    color:	#0b89d5;
+}
+h1 {
+    font-size: 36px;
+    border-bottom: #0b89d5 solid 1px ;
+}
+
+.button {
+    width: 100%;
+}
+.search {
+     height: 35px;
+     width: 130px;
+     padding: 5px 0;
+    font-size: 18px;
+    display:inline-block;
+ }
+
+.inline {
+    display:inline-block;
+
+}
+button {
+    background-color: #0b89d5;
+    color: #504455;
+    margin-right: 10px;
+    padding: 5px 15px;
+    border-style: hidden;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+label {
+    display: none;
+}
+ p {
+     font-size: 10px;
+     margin-bottom: 0;
+ }
+
+ input {
+     width: 588px;
+     height: 30px;
+ }
+
+ table {
+     margin-top: 30px;
+     border: #0b89d5 solid 1px;
+     border-radius: 10px;
+     overflow: hidden;
+     border-collapse: collapse;
+ }
+
+ tbody {
+     border: #0b89d5 solid 1px;
+ }
+
+ th {
+     color: #504455;
+     background-color: #0b89d5;
+     border: #0b89d5 solid 1px;
+ }
+td {
+    padding-left: 10px;
+    /*border: #0b89d5 solid 1px;*/
+}
+
+thead th:nth-child(1) {
+    width: 200px;
+    border-right: #504455 solid 1px;
+}
+thead th:nth-child(2) {
+    width: 350px;
+    border-right: #504455 solid 1px;
+}
+thead th:nth-child(3) {
+    width: 110px;
+    border-right: #504455 solid 1px;
+}
+thead th:nth-child(4) {
+    width: 50px;
+}
+
+
+tbody td:nth-child(3) {
+    text-align: right;
+}
+tbody td:nth-child(4) {
+    text-align: center;
+}

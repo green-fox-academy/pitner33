@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>WebShop main</title>
+    <link rel="stylesheet" href="/webShopStylesheet.css">
+</head>
+<body>
+    <div>
+        <h1>Wasteland Market</h1>
+    </div>
+    <div class="button">
+        <button type="button" onclick="location.href='/webshop/only-available'">Only available</button>
+        <button type="button" onclick="location.href='/cheapest-first'">Cheapest first</button>
+        <button type="button" onclick="location.href='/contains-nuka'">Contains NUKA</button>
+        <button type="button" onclick="location.href='/avg-stock'">Average Stock</button>
+        <button type="button" onclick="location.href='/most-expensive-available'">Most expensive available</button>
+    </div>
+    <div>
+        <p>Search for...</p>
+    </div>
+    <div >
+        <label for="search">Search</label>
+        <input class="inline"type="text" id="search" name="search">
+        <button class="inline, search" type="submit">Search</button>
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>On stock</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="item : ${list}">
+                    <td th:text="${item.getName()}"></td>
+                    <td th:text="${item.getDescription()}"></td>
+                    <td th:text="${item.getPrice()} + ' Caps'"></td>
+                    <td th:text="${item.getQty()}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+</body>
+</html>
