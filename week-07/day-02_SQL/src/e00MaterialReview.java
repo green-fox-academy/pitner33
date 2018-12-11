@@ -95,6 +95,82 @@ public class e00MaterialReview {
     //ORDER BY reviewer.name, movie.title, rating.stars;
 //
 //
+//Find the names of all reviewers who rated Gone with the Wind.
+    //SELECT DISTINCT reviewer.name
+    //FROM rating
+    //INNER JOIN movie ON rating.mID = movie.mID
+    //INNER JOIN reviewer ON rating.rID = reviewer.rID
+    //WHERE movie.title = "Gone with the Wind" AND rating.stars NOT NULL;
+//
+//
+//For any rating where the reviewer is the same as the director of the movie, return the reviewer name, movie title, and number of stars.
+    //SELECT DISTINCT reviewer.name, movie.title, rating.stars
+    //FROM rating
+    //INNER JOIN movie ON rating.mID = movie.mID
+    //INNER JOIN reviewer ON rating.rID = reviewer.rID
+    //WHERE reviewer.name = movie.director;
+//
+//
+//
+//TODO APP EMMEG MITOL SARGA
+//  CREATE TABLE todos (
+//    -> id INT NOT NULL AUTO_INCREMENT,
+//    -> isDone ENUM ('T', 'F') DEFAULT 'F',
+//    -> description VARCHAR(255),
+//    -> PRIMARY KEY(id)
+//    -> );
+//
+//
+//  INSERT INTO todos VALUES
+//    -> (NULL, 'T', "Walk the goddamn dog!");
+//
+//Highschooler ( ID, name, grade )
+//English: There is a high school student with unique ID and a given first name in a certain grade.
+//
+//Friend ( ID1, ID2 )
+//English: The student with ID1 is friends with the student with ID2. Friendship is mutual, so if (123, 456)
+// is in the Friend table, so is (456, 123).
+//
+//Likes ( ID1, ID2 )
+//English: The student with ID1 likes the student with ID2. Liking someone is not necessarily mutual, so if (123, 456)
+// is in the Likes table, there is no guarantee that (456, 123) is also present.
+//
+//Find the names of all students who are friends with someone named Gabriel.
+        //SELECT *
+        //FROM Highschooler H1
+        //INNER JOIN Friend ON H1.ID = Friend.ID1
+        //INNER JOIN Highschooler H2 ON H2.ID = Friend.ID2      //igy lehet megnezni mi a tabla amit letrehoztal a joinolassal
+//
+//and the solution:
+    //SELECT H1.name
+    //FROM Highschooler H1
+    //INNER JOIN Friend ON H1.ID = Friend.ID1
+    //INNER JOIN Highschooler H2 ON H2.ID = Friend.ID2
+    //WHERE H2.name = "Gabriel";
+//
+//
+//For every student who likes someone 2 or more grades younger than themselves, return that student's name and grade,
+// and the name and grade of the student they like.
+    //SELECT H1.name, H1.grade, H2.name, H2.grade
+    //FROM Highschooler H1
+    //INNER JOIN Likes ON H1.ID = Likes.ID1
+    //INNER JOIN Highschooler H2 ON H2.ID = Likes.ID2
+    //WHERE (H1.grade - H2.grade) > 1;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
