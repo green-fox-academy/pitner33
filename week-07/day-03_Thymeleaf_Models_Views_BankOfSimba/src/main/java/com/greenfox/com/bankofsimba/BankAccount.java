@@ -2,10 +2,10 @@ package com.greenfox.com.bankofsimba;
 
 public class BankAccount {
     private String name;
-    private Integer balance;
+    private Float balance;
     private String animalType;
 
-    public BankAccount(String name, Integer balance, String animalType) {
+    public BankAccount(String name, Float balance, String animalType) {
         this.name = name;
         this.balance = balance;
         this.animalType = animalType;
@@ -19,11 +19,11 @@ public class BankAccount {
         this.name = name;
     }
 
-    public Integer getBalance() {
+    public Float getBalance() {
         return balance;
     }
 
-    public void setBalance(Integer balance) {
+    public void setBalance(Float balance) {
         this.balance = balance;
     }
 

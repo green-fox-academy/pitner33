@@ -7,10 +7,17 @@
 </head>
 <body>
     <div th:each="account : ${bankAccounts}">
-        <p th:text="'Account owner: ' + ${account.name}
-        + ' | Balance: ' + ${account.balance}
+        <p th:text="${accountStat.index}
+        + ' Account owner: ' + ${account.name}
+        + ' | Balance: ' + ${#numbers.formatDecimal(account.balance,1,2, 'POINT') + ' MEAT'}
         + ' | Animal type: ' + ${account.animalType}"></p>
 
+    </div>
+        <div th:each="account : ${bankAccounts}" th:object="${account}">
+            <p th:text="|${accountStat.count}
+             Account owner: *{name}
+            Balance: *{#numbers.formatDecimal(balance,1,2, 'POINT')} MEAT
+            Animal type: *{animalType}|"></p>
     </div>
 
 </body>
