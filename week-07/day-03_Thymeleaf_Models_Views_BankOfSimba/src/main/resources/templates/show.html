@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Thymeleaf Exercise #Bank Of Simba - Showing the account</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+    <meta charset="utf-8" />
+</head>
+<body>
+    <div th:each="account : ${bankAccounts}">
+        <p th:text="'Account owner: ' + ${account.name}
+        + ' | Balance: ' + ${account.balance}
+        + ' | Animal type: ' + ${account.animalType}"></p>
+
+    </div>
+
+</body>
+</html>
