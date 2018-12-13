@@ -13,11 +13,107 @@
         + ' | Animal type: ' + ${account.animalType}"></p>
 
     </div>
-        <div th:each="account : ${bankAccounts}" th:object="${account}">
+    <div>
+        <p>___________________________________________________________________</p>
+    </div>
+    <div th:each="account : ${bankAccounts}" th:object="${account}">
             <p th:text="|${accountStat.count}
              Account owner: *{name}
             Balance: *{#numbers.formatDecimal(balance,1,2, 'POINT')} MEAT
             Animal type: *{animalType}|"></p>
+    </div>
+    <div>
+        <p>___________________________________________________________________</p>
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Name</th>
+                    <th>Balance</th>
+                    <th>Animal type</th>
+                    <!--<th>King</th>-->
+                </tr>
+            </thead>
+            <tbody th:each="account : ${bankAccounts}" th:object="${account}" th:switch="${account.badOrGood}">
+                <tr th:if="*{isKing}" style = "background-color: gold" >
+                    <td th:text="${accountStat.count}"></td>
+                    <td th:text="*{name}"></td>
+                    <td th:text="|*{#numbers.formatDecimal(balance,1,2, 'POINT')} MEAT|"></td>
+                    <td th:text="*{animalType}"></td>
+                    <!--<td th:text="*{isKing}"></td>-->
+                </tr>
+                <!--<tr th:if="*{isKing == true}" th:case="'bad'" style = "background-color: red" >-->
+                    <!--<td th:text="${accountStat.count}"></td>-->
+                    <!--<td th:text="*{name}"></td>-->
+                    <!--<td th:text="|*{#numbers.formatDecimal(balance,1,2, 'POINT')} MEAT|"></td>-->
+                    <!--<td th:text="*{animalType}"></td>-->
+                    <!--&lt;!&ndash;<td th:text="*{isKing}"></td>&ndash;&gt;-->
+                <!--</tr>-->
+                <tr th:unless="*{isKing}" th:case="'bad'" style = "background-color: darkgray">
+                    <td th:text="${accountStat.count}"></td>
+                    <td th:text="*{name}"></td>
+                    <td th:text="|*{#numbers.formatDecimal(balance,1,2, 'POINT')} MEAT|"></td>
+                    <td th:text="*{animalType}"></td>
+                    <!--<td th:text="*{isKing}"></td>-->
+                </tr>
+                <tr th:unless="*{isKing}" th:case="'good'" style = "background-color: lightgreen">
+                    <td th:text="${accountStat.count}"></td>
+                    <td th:text="*{name}"></td>
+                    <td th:text="|*{#numbers.formatDecimal(balance,1,2, 'POINT')} MEAT|"></td>
+                    <td th:text="*{animalType}"></td>
+                    <!--<td th:text="*{isKing}"></td>-->
+                </tr>
+            </tbody>
+        </table>
+
+        <div>
+            <p>___________________________________________________________________</p>
+        </div>
+
+        <div>
+            <table>
+                <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Name</th>
+                    <th>Balance</th>
+                    <th>Animal type</th>
+                    <!--<th>King</th>-->
+                </tr>
+                </thead>
+                <tbody th:each="account : ${bankAccounts}" th:object="${account}" th:style="*{isKing} ? 'background-color:gold' : 'background-color:white' ">
+                <tr  >
+                    <td th:text="${accountStat.count}"></td>
+                    <td th:text="*{name}"></td>
+                    <td th:text="|*{#numbers.formatDecimal(balance,1,2, 'POINT')} MEAT|"></td>
+                    <td th:text="*{animalType}"></td>
+                    <!--<td th:text="*{isKing}"></td>-->
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        </div>
+    <!--<div >-->
+        <!--<form action="#" th:action="@{/show}"   method="POST">-->
+            <!--<label for="name">Name</label>-->
+            <!--<input type="text" id="name", th:name="name">-->
+            <!--<button type="submit">Top Up some money for me!</button>-->
+        <!--</form>-->
+    <!--</div>-->
+    <div >
+        <form action="#" th:action="@{/show}"   method="POST" >
+            <label for="name">Name</label>
+            <select name="nameOfAccountOwner" id="name">
+                <option name="default"></option>
+                <option th:each="account : ${bankAccounts}" th:object="${account}" th:name="*{name}" th:text="*{name}" ></option>
+
+            </select>
+            <button type="submit">Top Up some money for me!</button>
+        </form>
     </div>
 
 </body>

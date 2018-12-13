@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Useful Utilities</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h1>Useful</h1>
+    <div>
+        <a href="/useful/colored" th:text="'Colored Background'"></a>
+
+    </div>
+    <div>
+        <a th:href="@{'/useful/email?email=this@is.valid'}" th:text="'Email valid'"></a>
+    </div>
+    <div>
+        <a th:href="@{'/useful/encode?sentence=kurvaanyad&number=2'}" th:text="'Encode'"></a>
+    </div>
+    <div>
+        <a th:href="@{'/useful/decode?sentence=mwtxccpacf&number=2'}" th:text="'Decode'"></a>
+    </div>
+
+</body>
+</html>

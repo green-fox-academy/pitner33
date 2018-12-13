@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Thymeleaf Exercise #Bank Of Simba - Showing the account</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+    <meta charset="utf-8" />
+</head>
+<body>
+<div >
+    <form action="#" th:action="@{/topup}"   method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name", th:name="name">
+        <button type="submit">Top Up some money for me!</button>
+    </form>
+</div>
+</body>
+</html>
