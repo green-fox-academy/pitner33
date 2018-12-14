@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Programmer Fox Club</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+    <meta charset="utf-8" />
+</head>
+<body th:object="${fox}">
+    <div>
+        <ul>
+            <a th:href="@{'/information?name=' + ${fox.name}}"><li th:text="'Information'"></li></a>
+            <a th:href="@{'/nutritionStore?name=' + ${fox.name}}"><li th:text="'Nutrition Store'"></li></a>
+            <a th:href="@{'/trickcenter?name=' + ${fox.name}}"><li th:text="'Trick Center'"></li></a>
+            <a th:href="@{'/actionhistory?name=' + ${fox.name}}"><li th:text="'Action History'"></li></a>
+        </ul>
+    </div>
+
+<div >
+    <form th:action="'/trickcenter/add?name=' + ${fox.name}" method="post"  >
+        <label th:text="'Tricks'">Tricks</label>
+        <select name="trick">
+            <option value="write HTML">write HTML</option>
+            <option value="Drink beer">Drink beer</option>
+            <option value="Silly dance">Silly dance</option>
+            <option value="Sleep">Sleep</option>
+            <!--<div th:each="fox : ${foxes}" th:object="${fox}">-->
+            <!--<option  th:name="*{food}" th:text="*{food}" ></option>-->
+            <!--</div>-->
+        </select>
+        <button type="submit" th:text="Change"></button>
+    </form>
+</div>
+<div>
+
+</div>
+
+</body>
+</html>

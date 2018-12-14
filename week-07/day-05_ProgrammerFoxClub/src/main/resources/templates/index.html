@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Programmer Fox Club</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+    <meta charset="utf-8" />
+</head>
+<body>
+    <div th:object="${fox}">    <!--here I give the Model named "fox" to the html NAME IMPORTANT  model.addAttribute("fox", optionalFox.get()); MUST BE THE SAME-->
+
+
+        <div>
+            <ul>
+                <a th:href="@{'/information?name=' + ${fox.name}}"><li th:text="'Information'"></li></a>        <!--th:href="@{'/information?NAME=' THE NAME IN THIS MUST BE THE SAME AS @RequestParam(value = "NAME"-->
+                <a th:href="@{'/nutritionStore?name=' + ${fox.name}}"><li th:text="'Nutrition Store'"></li></a>
+                <a th:href="@{'/trickcenter?name=' + ${fox.name}}"><li th:text="'Trick Center'"></li></a>
+                <a th:href="@{'/actionhistory?name=' + ${fox.name}}"><li th:text="'Action History'"></li></a>
+            </ul>
+        </div>
+        <div>
+        <img src="greenfox.png" alt="foxy">
+        </div>
+        <div>           <!--I can use *{} here because I added ${fox} at the top-->
+        <p th:text="'This is ' + *{name} + '. Currently living on ' + *{food} + ' and ' + *{drink} + '. He knows ' + *{listOfTricks.size() + ' tricks.'}"></p>
+        </div>
+        <div>
+        <h1>Known tricks</h1>
+        </div>
+        <div>
+            <ul>        <!--LIST ELEMENTS IN ORDER-->
+                <li th:if="${fox.listOfTricks.isEmpty()}" th:text="*{name} + ' knows no tricks, yet. Go and learn some'"></li>
+                <li th:unless="${fox.listOfTricks.isEmpty()}" th:each="trick : ${fox.listOfTricks}" th:text="${trick}"></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

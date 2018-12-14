@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Programmer Fox Club</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+    <meta charset="utf-8" />
+</head>
+<body th:object="${fox}">
+    <div>
+        <ul>
+            <a th:href="@{'/information?name=' + ${fox.name}}"><li th:text="'Information'"></li></a>
+            <a th:href="@{'/nutritionStore?name=' + ${fox.name}}"><li th:text="'Nutrition Store'"></li></a>
+            <a th:href="@{'/trickcenter?name=' + ${fox.name}}"><li th:text="'Trick Center'"></li></a>
+            <a th:href="@{'/actionhistory?name=' + ${fox.name}}"><li th:text="'Action History'"></li></a>
+        </ul>
+    </div>
+    <div > <!--CREATING A FORM FROM WHERE I CAN ADD THINGS TO MY LIST OF THINGS I NEED THE FORM LIKE THIS ONE-->
+        <form th:action="'/nutritionStore/add?name=' + ${fox.name}" method="post"  >
+
+            <select th:field="*{food}">     <!--CONNECT THE SELECT FIELD TO THE FOOD FIELDVARIABLE - THIS WAY IT WILL KNOW WHERE TO PUT THE DATA-->
+                <option value="Pizza">Pizza</option>
+                <option value="Meat">Meat</option>
+                <option value="Veggies">Veggies</option>
+                <option value="Sunlight">Sunlight</option>
+                <!--<div th:each="fox : ${foxes}" th:object="${fox}">-->            <!--THIS IS OUTCOMMENTED BECAUSE IT USES THE LIST OF FOXES BUT CURRENTLY THEY ARE CREATED-->
+                <!--<option  th:name="*{food}" th:text="*{food}" ></option>-->      <!--WITH STATIC PIZZA AND BEER SO THERE IS NO FOOD/DRINK TO CHOSE FROM-->
+                <!--</div>-->
+            </select>
+            <select name = "drink"> <!--EZ IS OK MEG A TH:FIELD IS (ld a foodnal feljebb). LENYEG: A @MODEL ATTRIBUTE("DRINK") UGZANAY LEGYEN, MINT ITT. A SIMA AKKOR IS MUKODIK HA NEM HIVOM MEG A BODYNAL A FOXOT - A MODELaTTRIBNAL MEGVAN-->
+                <option value="Beer">Beer</option>
+                <option value="Water">Water</option>
+                <option value="Liquid Nitrogen">Liquid Nitrogen</option>
+                <option value="Juice">Juice</option>
+                <!--<div th:each="fox : ${foxes}" th:object="${fox}">-->
+                <!--<option th:name="*{drink}" th:text="*{drink}" ></option>-->
+                <!--</div>-->
+            </select>
+            <button type="submit" th:text="Change"></button>
+        </form>
+    </div>
+    <div>
+
+    </div>
+
+</body>
+</html>
