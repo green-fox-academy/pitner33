@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Programmer Fox Club</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+    <meta charset="utf-8" />
+</head>
+<body>
+    <div>
+        <h1>Todos for today</h1>
+    </div>
+    <div>
+        <a th:href="@{add}" th:text="'Add new todo'"></a>
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>ACTION</th>
+                    <th>DONE</th>
+                    <th>URGENT</th>
+                    <th>DELETE</th>
+                    <th>EDIT</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="todo : ${todos}">
+                    <td th:text="${todo.getId()}"></td>
+                    <td th:text="${todo.getTitle()}"></td>
+                    <td th:text="${todo.getDone()}"></td>
+                    <td th:text="${todo.getUrgent()}"></td>
+                    <td><a th:href="@{${todo.getId()} + '/delete'}" th:text="delete"></a></td>
+                    <td><a th:href="@{${todo.getId()} + '/edit'}" th:text="edit"></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+
+    </div>
+
+</body>
+</html>

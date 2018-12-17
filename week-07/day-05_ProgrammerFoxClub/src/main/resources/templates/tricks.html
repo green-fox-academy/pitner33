@@ -18,7 +18,7 @@
 <div >
     <form th:action="'/trickcenter/add?name=' + ${fox.name}" method="post"  >
         <label th:text="'Tricks'">Tricks</label>
-        <select name="trick">
+        <select name="trick">  <!--EZ IS OK MEG A TH:FIELD IS (ld a foodnal feljebb). LENYEG: A @MODEL ATTRIBUTE("TRICK") UGZANAZ LEGYEN, MINT ITT. A SIMA AKKOR IS MUKODIK HA NEM HIVOM MEG A BODYNAL A FOXOT - A MODELaTTRIBNAL MEGVAN-->
             <option value="write HTML">write HTML</option>
             <option value="Drink beer">Drink beer</option>
             <option value="Silly dance">Silly dance</option>
