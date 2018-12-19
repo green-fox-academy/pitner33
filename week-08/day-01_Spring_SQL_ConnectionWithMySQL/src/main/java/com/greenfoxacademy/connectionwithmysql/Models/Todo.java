@@ -1,9 +1,9 @@
 package com.greenfoxacademy.connectionwithmysql.Models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 public class Todo {
@@ -13,6 +13,13 @@ public class Todo {
     private String title;
     private Boolean urgent;
     private Boolean done;
+    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
+    private Date date = new Date();
+    private String description;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="assignee_id")
+    private Assignee assignee;
 
     public Todo() {                 //create with default values
         this.urgent = false;
@@ -62,5 +69,27 @@ public class Todo {
         this.done = done;
     }
 
+    public Date getDate() {
+        return date;
+    }
 
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Assignee getAssignee() {
+        return assignee;
+    }
+
+    public void setAssignee(Assignee assignee) {
+        this.assignee = assignee;
+    }
 }

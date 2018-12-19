@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Programmer Fox Club</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+    <meta charset="utf-8" />
+    <!-- Bootstrap CSS -->
+    <link href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" rel="stylesheet"/>    <!--Plus dependecies!!!!-->
+<head>
+    <meta charset="UTF-8">
+    <title>Assignees</title>
+</head>
+<body>
+<div class="container">
+    <br class="row">
+        <div class="col-md-12">
+            <div>
+            <a class="btn btn-success" th:href="@{/todo/assignees/add}" th:text="'Add new Assignee'"></a>
+            </div>
+            </br>
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>EMAIL</th>
+                    <th></th>
+                    <th></th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="assignee : ${assignees}">
+                    <td th:text="${assignee.getId()}"></td>
+                    <td th:text="${assignee.getName()}"></td>
+                    <td th:text="${assignee.getEmail()}"></td>
+                    <td><a class="btn btn-danger btn-sm" th:href="@{${assignee.getId()} + '/deleteassignee'}" th:text="Delete"></a></td>
+                    <td><a class="btn btn-warning btn-sm" th:href="@{${assignee.getId()} + '/editassignee'}" th:text="Edit"></a></td>
+
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    <div>
+
+    <a class="btn btn-primary btn-sm" th:href="@{/todo/list}" th:text="'Back to Dos'"></a></td>
+    </div>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
