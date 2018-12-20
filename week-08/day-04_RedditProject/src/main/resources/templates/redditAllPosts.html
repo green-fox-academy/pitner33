@@ -17,25 +17,29 @@
     <div>
         <a class="btn btn-success" th:href="@{/submit}" th:text="'Submit new post'"></a>
     </div>
-    <div>
         </br>
-        <a class="btn btn-success" th:href="@{/all}" th:text="'All posts'"></a>
+        <a class="btn btn-success" th:href="@{/}" th:text="'Most popular posts'"></a>
     </div>
-    <div>
-        <h1>Trending posts</h1>
-    </div>
-    <div>
-        <table class="table">
-            <tbody>
-                <tr th:each="reddit : ${allReddits}">
-                    <td th:text="${reddit.score}"></td>
-                    <td><a th:href="@{'/' + ${reddit.id} + '/upscore'}"><i class="glyphicon glyphicon-plus"></i></a></td>
-                    <td><a th:href="@{'/' + ${reddit.id} + '/downscore'}"><i class="glyphicon glyphicon-minus"></i></a></td>
-                    <td><a th:href="@{'/' + ${reddit.id} + '/details'}" th:text="${reddit.title}"></a></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div>
+                    <h1>All posts</h1>
+                </div>
+                <table class="table">
+                    <tbody>
+                    <tr th:each="reddit : ${allReddits}">
+                        <td th:text="${reddit.score}"></td>
+                        <td><a th:href="@{'/' + ${reddit.id} + '/upscoreall'}"><i class="glyphicon glyphicon-plus"></i></a></td>
+                        <td><a th:href="@{'/' + ${reddit.id} + '/downscoreall'}"><i class="glyphicon glyphicon-minus"></i></a></td>
+                        <td><a th:href="@{'/' + ${reddit.id} + '/details'}" th:text="${reddit.title}"></a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+</div>
 
     <!--CONTENT HERE-->
 

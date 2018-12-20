@@ -15,24 +15,26 @@
         </div>
     </div>
     <div>
-        <a class="btn btn-success" th:href="@{/submit}" th:text="'Submit new post'"></a>
+        <a class="btn btn-success" th:href="@{/}" th:text="'Back'"></a>
     </div>
     <div>
-        </br>
-        <a class="btn btn-success" th:href="@{/all}" th:text="'All posts'"></a>
+        <h1>Details</h1>
     </div>
     <div>
-        <h1>Trending posts</h1>
-    </div>
-    <div>
-        <table class="table">
-            <tbody>
-                <tr th:each="reddit : ${allReddits}">
-                    <td th:text="${reddit.score}"></td>
-                    <td><a th:href="@{'/' + ${reddit.id} + '/upscore'}"><i class="glyphicon glyphicon-plus"></i></a></td>
-                    <td><a th:href="@{'/' + ${reddit.id} + '/downscore'}"><i class="glyphicon glyphicon-minus"></i></a></td>
-                    <td><a th:href="@{'/' + ${reddit.id} + '/details'}" th:text="${reddit.title}"></a></td>
-                </tr>
+        <table class="table" >
+            <tbody th:object="${reddit}" >
+            <tr>
+                <td th:text="${reddit.score}"></td>
+            </tr>
+            <tr>
+                <td th:text="${reddit.title}"></td>
+            </tr>
+            <tr>
+                <td th:text="${reddit.message}"></td>
+            </tr>
+            <tr>
+                <td th:text="${reddit.getURL()}"></td>
+            </tr>
             </tbody>
         </table>
     </div>

@@ -1,4 +1,7 @@
 package com.grennfoxacademy.reddit.Repositories;
 
-public class RedditRepository {
+import com.grennfoxacademy.reddit.Models.Reddit;
+import org.springframework.data.repository.CrudRepository;
+
+public interface RedditRepository extends CrudRepository<Reddit, Long> {
 }

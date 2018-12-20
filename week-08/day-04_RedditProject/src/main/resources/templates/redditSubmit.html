@@ -15,26 +15,31 @@
         </div>
     </div>
     <div>
-        <a class="btn btn-success" th:href="@{/submit}" th:text="'Submit new post'"></a>
+        <a class="btn btn-success" th:href="@{/}" th:text="'Back'"></a>
     </div>
     <div>
-        </br>
-        <a class="btn btn-success" th:href="@{/all}" th:text="'All posts'"></a>
+        <h1>Submit a new post</h1>
     </div>
+
     <div>
-        <h1>Trending posts</h1>
-    </div>
-    <div>
-        <table class="table">
-            <tbody>
-                <tr th:each="reddit : ${allReddits}">
-                    <td th:text="${reddit.score}"></td>
-                    <td><a th:href="@{'/' + ${reddit.id} + '/upscore'}"><i class="glyphicon glyphicon-plus"></i></a></td>
-                    <td><a th:href="@{'/' + ${reddit.id} + '/downscore'}"><i class="glyphicon glyphicon-minus"></i></a></td>
-                    <td><a th:href="@{'/' + ${reddit.id} + '/details'}" th:text="${reddit.title}"></a></td>
-                </tr>
-            </tbody>
-        </table>
+        <form th:href="@{/submit}" method="post" th:object="${newReddit}">
+            <div class="form-group">
+                <label for="title" th:text="'Title: '"></label>
+                <input class="form-control" type="text" th:field="*{title}" name="title" id="title" placeholder="Title" required>
+            </div>
+            <div>
+                <label for="message" th:text="'Message: '"></label>
+                <textarea class="form-control" type="text" th:field="*{message}" name="message" id="message"></textarea>
+            </div>
+            <div>
+                <label for="url" th:text="'URL: '"></label>
+                <input class="form-control" type="url" th:field="*{URL}" name="url" id="url">
+            </div>
+            <br>
+                </br>
+                <input class="btn btn-success" type="submit" value="Submit">
+            </div>
+        </form>
     </div>
 
     <!--CONTENT HERE-->
