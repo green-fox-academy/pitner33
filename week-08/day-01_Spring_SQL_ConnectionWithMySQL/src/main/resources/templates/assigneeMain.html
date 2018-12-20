@@ -26,6 +26,8 @@
                     <th>EMAIL</th>
                     <th></th>
                     <th></th>
+                    <th></th>
+                    <th></th>
 
                 </tr>
                 </thead>
@@ -36,6 +38,19 @@
                     <td th:text="${assignee.getEmail()}"></td>
                     <td><a class="btn btn-danger btn-sm" th:href="@{${assignee.getId()} + '/deleteassignee'}" th:text="Delete"></a></td>
                     <td><a class="btn btn-warning btn-sm" th:href="@{${assignee.getId()} + '/editassignee'}" th:text="Edit"></a></td>
+                    <td class="col-lg-1">
+                        <button class="btn btn-primary" type="button" data-toggle="collapse"
+                                th:data-target="'#collapse' + ${assignee.id}"
+                                aria-expanded="false" th:aria-controls="'#collapse' + ${assignee.id}">
+                            SHOW TODOS
+                        </button>
+                        <div class="collapse" th:id="'collapse' + ${assignee.id}">
+                            <span>Todos</span>
+                            <ol>
+                                <li th:each="todo : ${assignee.todoList}" th:text="${todo.title}"></li>
+                            </ol>
+                        </div>
+                    </td>
 
                 </tr>
                 </tbody>

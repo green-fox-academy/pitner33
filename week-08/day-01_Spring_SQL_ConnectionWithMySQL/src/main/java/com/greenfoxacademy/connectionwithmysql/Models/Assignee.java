@@ -46,4 +46,12 @@ public class Assignee {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public List<Todo> getTodoList() {
+        return todoList;
+    }
+
+    public void setTodoList(List<Todo> todoList) {
+        this.todoList = todoList;
+    }
 }
