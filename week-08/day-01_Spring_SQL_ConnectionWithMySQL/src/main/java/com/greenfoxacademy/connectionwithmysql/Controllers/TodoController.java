@@ -70,7 +70,6 @@ public class TodoController {
         todo.setAssignee(assigneeRepository.findByName(assig));
         todoRepository.save(todo);
         return "redirect:/todo/list";
-
     }
 
     @GetMapping("{id}/details")
