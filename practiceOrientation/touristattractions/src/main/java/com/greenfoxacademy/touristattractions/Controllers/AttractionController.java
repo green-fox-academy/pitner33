@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -31,8 +32,19 @@ public class AttractionController {
     //REDIRECT ATTRIBUTES IF YOU WANT TO KEEP THE TEXT IN THE FORM AFTER OBJECT WAS ADDED
     public String addNewAttraction(/*RedirectAttributes attributes, */@ModelAttribute(value = "newAttraction") Attraction attraction) {
 //        attributes.addFlashAttribute("newAttraction", attraction);
-        attractionService.save(attraction);
+      /*  if (attractionService.findById(attraction.getId()) != null) {
+            Attraction attractionTemp = attractionService.findById(attraction.getId());
+            attractionTemp = attraction;
+            attractionService.save(attractionTemp);
+        } else*/ attractionService.save(attraction);
         return "redirect:/";
+    }
+
+    @GetMapping("/edit/{id}")
+    public String edit(@PathVariable Long id, Model model) {
+        model.addAttribute("newAttraction", attractionService.findById(id));
+        model.addAttribute("attractionList", attractionService.findAll());
+        return "index";
     }
 }
 

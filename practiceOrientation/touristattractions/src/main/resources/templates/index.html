@@ -22,6 +22,7 @@
         <div >
             <form th:action="@{/add}" method="post" th:object="${newAttraction}">
                 <div class="form-inline">
+                    <input class="form-control" type="hidden" th:field="*{id}" name="id" id="id">
                     <label  for="name" th:text="'Name: '"></label>
                     <input class="form-control" type="text" th:field="*{name}" name="name" id="name" placeholder="Name" required>
                     <label for="city" th:text="'City: '"></label>
