@@ -1,10 +1,9 @@
 package com.greenfoxacademy.cars.Models;
 
-import com.sun.javafx.beans.IDProperty;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Car {
@@ -15,6 +14,9 @@ public class Car {
     private String car_model;
     private String color;
     private Integer year;
+
+    @ManyToOne
+    private Owner owner;
 
     public Car() {
     }
@@ -65,5 +67,13 @@ public class Car {
 
     public void setYear(Integer year) {
         this.year = year;
+    }
+
+    public Owner getOwner() {
+        return owner;
+    }
+
+    public void setOwner(Owner owner) {
+        this.owner = owner;
     }
 }

@@ -34,4 +34,8 @@ public class CarService {
     public List<Car> findByBrand(String brand) {
         return (List<Car>) carRepository.findByBrand(brand);
     }
+
+    public void save(Car car) {
+        carRepository.save(car);
+    }
 }
