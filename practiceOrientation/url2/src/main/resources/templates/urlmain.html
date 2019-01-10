@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+    <meta charset="utf-8" />
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>URL thingy</h1>
+        </div>
+    </div>
+    <div th:if="${error}" th:text="${error}"></div>
+    <div th:if="${message}" th:text="${message}" ></div>
+    <div>
+        <form th:action="@{/save-link}" method="post" th:object="${newUrlModel}">
+            <div>
+                <label for="url" th:text="URL"></label>
+            </div>
+            <div>
+                <input type="url" th:name="url" id="url" th:field="*{url}" placeholder="URL" required>
+            </div>
+            <div>
+                <label for="alias" th:text="Alias"></label>
+            </div>
+            <div>
+                <input type="text" th:name="url" id="alias" th:field="*{alias}" placeholder="Alias" required>
+            </div>
+            <div>
+            <button type="submit" th:text="Submit"></button>
+            </div>
+        </form>
+    </div>
+
+    <!--CONTENT HERE-->
+
+</div>
+</body>
+</html>
