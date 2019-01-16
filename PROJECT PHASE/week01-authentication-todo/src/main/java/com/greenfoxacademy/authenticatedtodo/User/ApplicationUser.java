@@ -15,9 +15,9 @@ public class ApplicationUser {
     private String username;
     private String password;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "applicationUser")
-//    @JsonManagedReference
-    @JsonIgnore
+    @OneToMany(cascade = CascadeType.PERSIST/*, mappedBy = "applicationUser"*/)
+    @JsonManagedReference
+//    @JsonIgnore
     private List<Todo> todoList;
 
     public ApplicationUser() {

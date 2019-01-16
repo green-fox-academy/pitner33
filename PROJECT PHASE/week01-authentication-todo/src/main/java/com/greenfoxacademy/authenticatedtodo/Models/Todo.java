@@ -16,7 +16,7 @@ public class Todo {
     private String description;
 
     @ManyToOne
-//    @JsonBackReference
+    @JsonBackReference
 //    @JoinColumn(name = "application_user_id")
 //    @JoinTable(name = "todo_user", joinColumns = @JoinColumn(name ="todo_id", referencedColumnName="id"),
 //            inverseJoinColumns = @JoinColumn(name = "application_user_id", referencedColumnName="id"))

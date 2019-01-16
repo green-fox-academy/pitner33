@@ -2,6 +2,7 @@ package com.greenfoxacademy.authenticatedtodo.Controllers;
 
 import com.greenfoxacademy.authenticatedtodo.Models.Todo;
 import com.greenfoxacademy.authenticatedtodo.Models.TodoDTO;
+import com.greenfoxacademy.authenticatedtodo.Models.TodoListDTO;
 import com.greenfoxacademy.authenticatedtodo.Services.TodoService;
 import com.greenfoxacademy.authenticatedtodo.User.ApplicationUser;
 import com.greenfoxacademy.authenticatedtodo.User.ApplicationUserRepository;
@@ -23,8 +24,10 @@ public class TodoRestController {
     }
 
     @GetMapping("/")
-    public ResponseEntity<List<Todo>> list(){
-        return ResponseEntity.ok(todoService.findAll());
+    public ResponseEntity list(){
+        TodoListDTO todoList = new TodoListDTO();
+        todoList.setTodoList(todoService.findAll());
+        return ResponseEntity.ok(todoList);
     }
 
     @GetMapping("/todos/{username}")
@@ -36,14 +39,15 @@ public class TodoRestController {
     public String addTodo(@RequestBody TodoDTO todoDTO, @PathVariable(value = "username") String username) {
         Todo todoToAdd= new Todo();
         ApplicationUser user = applicationUserRepository.findByUsername(username);
-//        List<Todo> usersTodoList = user.getTodoList();
+        List<Todo> usersTodoList = user.getTodoList();
+
         todoToAdd.setApplicationUser(user);
         todoToAdd.setTitle(todoDTO.getTitle());
         todoToAdd.setDescription(todoDTO.getDescription());
-//        user.getTodoList().add(todoToAdd);
+        usersTodoList.add(todoToAdd);
+//        user.setTodoList(usersTodoList);
 
-
-        applicationUserRepository.save(user);
+//        applicationUserRepository.save(user);
         todoService.addTodo(todoToAdd);
         return "redirect:/";
     }

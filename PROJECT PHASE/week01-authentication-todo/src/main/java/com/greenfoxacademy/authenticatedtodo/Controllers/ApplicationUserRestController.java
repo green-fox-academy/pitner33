@@ -1,5 +1,6 @@
 package com.greenfoxacademy.authenticatedtodo.Controllers;
 
+import com.greenfoxacademy.authenticatedtodo.Models.ApplicationUserListDTO;
 import com.greenfoxacademy.authenticatedtodo.Services.TodoService;
 import com.greenfoxacademy.authenticatedtodo.User.ApplicationUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,9 @@ public class ApplicationUserRestController {
 
     @GetMapping("/list")
     public ResponseEntity userList() {
-        return ResponseEntity.ok(applicationUserRepository.findAll());
+        ApplicationUserListDTO allUserList = new ApplicationUserListDTO();
+        allUserList.setUserList(applicationUserRepository.findAll());
+
+        return ResponseEntity.ok(allUserList);
     }
 }
