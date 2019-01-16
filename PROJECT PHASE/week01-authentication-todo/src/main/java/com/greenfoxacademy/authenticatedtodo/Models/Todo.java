@@ -1,11 +1,10 @@
 package com.greenfoxacademy.authenticatedtodo.Models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.greenfoxacademy.authenticatedtodo.User.ApplicationUser;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -16,12 +15,20 @@ public class Todo {
     private String title;
     private String description;
 
+    @ManyToOne
+//    @JsonBackReference
+//    @JoinColumn(name = "application_user_id")
+//    @JoinTable(name = "todo_user", joinColumns = @JoinColumn(name ="todo_id", referencedColumnName="id"),
+//            inverseJoinColumns = @JoinColumn(name = "application_user_id", referencedColumnName="id"))
+    private ApplicationUser applicationUser;
+
     public Todo() {
     }
 
     public Todo(String title, String description) {
         this.title = title;
         this.description = description;
+        this.applicationUser = applicationUser;
     }
 
     public Long getId() {
@@ -48,5 +55,13 @@ public class Todo {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public ApplicationUser getApplicationUser() {
+        return applicationUser;
+    }
+
+    public void setApplicationUser(ApplicationUser applicationUser) {
+        this.applicationUser = applicationUser;
     }
 }

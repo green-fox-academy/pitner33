@@ -23,4 +23,12 @@ public class TodoService {
     public void addTodo(Todo todoToAdd) {
         todoRepository.save(todoToAdd);
     }
+
+    public List<Todo> findById(Long id) {
+        return (List<Todo>)todoRepository.findById(id).get();
+    }
+
+    public List<Todo> findByUsername(String username) {
+        return todoRepository.findByApplicationUser_Username(username);
+    }
 }
