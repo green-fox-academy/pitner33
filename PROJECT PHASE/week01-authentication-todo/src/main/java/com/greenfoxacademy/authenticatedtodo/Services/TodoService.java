@@ -24,8 +24,8 @@ public class TodoService {
         todoRepository.save(todoToAdd);
     }
 
-    public List<Todo> findById(Long id) {
-        return (List<Todo>)todoRepository.findById(id).get();
+    public Todo findByTodoId(Long id) {
+        return todoRepository.findById(id).get();
     }
 
     public List<Todo> findByUsername(String username) {

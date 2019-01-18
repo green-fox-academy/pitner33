@@ -26,6 +26,7 @@ public class Todo {
     }
 
     public Todo(String title, String description) {
+        this();
         this.title = title;
         this.description = description;
         this.applicationUser = applicationUser;
